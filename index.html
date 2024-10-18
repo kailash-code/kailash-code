@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Arrangement Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Process Arrangement Game!</h1>
+        <p>Select a process to arrange the steps:</p>
+        <button onclick="startGame('conveyorbeltreplacement')">CONVEYOR BELT REPLACEMENT</button>
+        <button onclick="startGame('encoderteaching')">ENCODER TEACHING</button>
+        <button onclick="startGame('backlasharresting')">BLACKLASH ARRESTING</button>
+        <button onclick="startGame('plcprogrambackupupload')">PLC PROGRAM BACKUP UPLOAD</button>
+    </div>
+    <script>
+        function startGame(process) {
+            window.location.href = `game.html?process=${process}`;
+        }
+    </script>
+</body>
+</html>

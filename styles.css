@@ -1,0 +1,153 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 25%, #fad0c4 50%, #fbc2eb 75%, #a18cd1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in for the whole page */
+}
+
+.container {
+    text-align: center;
+    background: rgba(143, 143, 143, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(207, 207, 207, 0.5);
+    width: 90%;
+    max-width: 700px;
+    height: 90%;
+    overflow-y: auto;
+    position: relative;
+    border: 5px solid #ffd700;
+    animation: bounceIn 1.2s ease-out; /* A bounce effect for the container on load */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px #000000;
+    animation: fadeIn 1s ease-in-out; /* Fade-in for heading */
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.step {
+    padding: 15px;
+    margin: 10px;
+    background-color: #747272;
+    border: 2px solid #888;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.step:hover {
+    background-color: #555;
+    border-color: #ffd700;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Glowing effect on hover */
+}
+
+.step.correct {
+    background-color: #28a745;
+    border-color: #218838;
+    color: #fff;
+    animation: bounceIn 1s ease-out;
+}
+
+.step.incorrect {
+    background-color: #dc3545;
+    border-color: #c82333;
+    color: #fff;
+    animation: bounceIn 1s ease-out;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: #3088e6f3;
+    color: rgb(238, 232, 232);
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    animation: bounceIn 1s ease-out; /* Bounce effect for buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 1px 1px 4px #000;
+    animation: fadeIn 1.5s ease-in-out; /* Message fades in */
+}
+
+.symbol {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    color: #ffd700;
+    text-shadow: 1px 1px #000;
+    animation: bounceIn 1s ease-out; /* Symbols bounce in */
+}
+
+#goBackButton {
+    position: absolute;
+    bottom: 15px;
+    left: 18px;
+    background-color: #6c757d;
+    color: #fff;
+    width: auto;
+    animation: fadeIn 2s ease-in-out; /* Slower fade-in for the Go Back button */
+}
+
+#goBackButton:hover {
+    background-color: #5a6268;
+    transform: scale(1.1);
+}
+
