@@ -6,7 +6,7 @@ const processSteps = {
         "Spare availability.",
         "Apply LOTO.",
         "Check motor coupling removal.",
-        "Replace belt.",
+        "Replace belts.",
         "Tension adjustment.",
         "Alignment of idle pulley.",
         "Check idle run.",
